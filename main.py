@@ -16,10 +16,6 @@ def get_all_adj(board,point):
 
 
 def main(board):
-    for arg in sys.argv[1:]:
-        print(arg)
-        b2 = np.load(arg)
-
     n = np.shape(board)[0]-1
     m = np.shape(board)[1]-1
     '''vert=np.zeros(get_number_of_valid_vert(board))'''
@@ -65,11 +61,11 @@ def main(board):
     return dis
 
 
-'''example of board'''
+
 if __name__ == "__main__":
     for arg in sys.argv[1:]:
-        print(arg)
         b = np.load(arg)
+    '''example of board'''
     '''BOARD = np.array([[0, 0, 0, 0], [2, 1, 1, 1], [2, 1, 1, 2], [0, 0, 1, 0], [0, 0, 1, 0], [0, 3, 0, 0], [0, 0, 1, 1]])'''
     main(b)
 
